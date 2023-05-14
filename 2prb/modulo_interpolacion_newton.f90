@@ -33,7 +33,7 @@ contains
     	end subroutine lagrange
 
 
-	subroutine newton
+	subroutine newton(n, x, fx, c ,pc)
 	
 	!variabkes qe ebtrab
 	!grado n, xi, fxi, el x (el c)
@@ -41,7 +41,7 @@ contains
 	
 	integer (il), intent (in)				::	n
 	real (wp), intent (in)					::	c
-	real (wp), dimension (0:n), intent (in)	::	x, fx
+	real (wp), dimension (0:n), intent (in)			::	x, fx
 	real (wp), intent (out)					::	pc
 	
 !-----------------------------------------------------
