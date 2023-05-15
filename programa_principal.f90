@@ -8,18 +8,18 @@ program principal
 	
 	!declaración de variables
 	
-	real(wp)					::	c, pc, func
+	real(wp)					::	c, pc, func, gunc
 	integer (il)				::	n, i
 	real(wp), dimension(0:n)	::	x, fx
 	
 	interface
-		function func (x) result (fx)
+		function func(x) result (fx)
 			implicit none
 			real(wp), intent (in)	::	x
 			real(wp), intent (out)	::	fx	
 			end function
 	
-		function gunc (x) result (fx)
+		function gunc(x) result (fx)
 			implicit none
 			real(wp), intent (in)	::	x
 			real(wp), intent (out)	::	fx	
@@ -76,14 +76,14 @@ program principal
 	
 end program principal
 
-function func (x) result (fx)
+function func(x) result (fx)
 	implicit none
 	real(wp), intent (in)	::	x
 	real(wp), intent (out)	::	fx	
 	fx = log(x + 1)
 end function
 
-function gunc (x) result (fx)
+function gunc(x) result (fx)
 	implicit none
 	real(wp), intent (in)	::	x
 	real(wp), intent (out)	::	fx	
