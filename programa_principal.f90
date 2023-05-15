@@ -10,7 +10,7 @@ program principal
 	
 	real(wp)					::	c, pc, func, gunc
 	integer (il)				::	n, i
-	real(wp), dimension(0:n)	::	x, fx
+	real(wp), dimension(0:2)	::	x, fx	!acá pide sí o sí un numero. no c por ke.
 	
 	interface
 		function func(x) result (fx)
